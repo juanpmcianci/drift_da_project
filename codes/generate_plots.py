@@ -194,8 +194,8 @@ aux.to_csv('tbv.csv',float_format='%.3f')
 times=trades['humanTime']
 skip=100
 #time series for oracle:
-m_oracle,fig_fore_oracle,fig_com_oracle=generate_tsa(times,trades['oraclePrice'],skip=skip,SAVENAME='oracle',TITLE='difference')
+m_oracle,fig_fore_oracle,fig_com_oracle=generate_tsa(times,trades['oraclePrice'],skip=skip,SAVENAME='oracle',TITLE='oracle')
 #time series for diff:
 m_diff,fig_fore_diff,fig_com_diff=generate_tsa(times,trades['oraclePrice']-trades['markPrice'],skip=skip,SAVENAME='difference',TITLE='difference')
 #time series for mark:
-m_mark,fig_fore_mark,fig_com_mark=generate_tsa(times,trades['markPrice'],skip=skip,SAVENAME='mark',TITLE='difference')
+m_mark,fig_fore_mark,fig_com_mark=generate_tsa(times,trades['markPrice'],skip=skip,SAVENAME='mark',TITLE='mark')
