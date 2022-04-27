@@ -1,0 +1,25 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% tikz stuff
+%
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage[utf8]{inputenc}
+\usepackage{pgfplots}
+%\DeclareUnicodeCharacter{2212}{−}
+\usepgfplotslibrary{groupplots,dateplot}
+\usetikzlibrary{patterns,shapes.arrows}
+\pgfplotsset{compat=newest}
+\pgfplotsset{compat=1.13}
+\usepgfplotslibrary{fillbetween}
+\pgfmathdeclarefunction{gauss}{2}
+{\pgfmathparse{1/(#2*sqrt(2*pi))*exp(-((x-#1)^2)/(2*#2^2))}}
+%symbol definitions
+\pgfplotsset{
+	colormap/viridis,
+}
+%\usepgfplotslibrary{colorbrewer} % LATEX and plain TEX
+%\usepgfplotslibrary[colorbrewer] % ConTEXt
+%\usetikzlibrary{pgfplots.colorbrewer} % LATEX and plain TEX
+%\usetikzlibrary[pgfplots.colorbrewer] % ConTEXt
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
